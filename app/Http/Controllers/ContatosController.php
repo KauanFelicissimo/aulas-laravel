@@ -12,4 +12,11 @@ class ContatosController extends Controller
 
         return view('pages.contatos.index', compact('findContatos'));
     }
+
+    public function delete($idUser){
+        $buscaRegistro = Contatos::find($idUser);
+        $buscaRegistro->delete();
+
+        return back();
+    }
 }

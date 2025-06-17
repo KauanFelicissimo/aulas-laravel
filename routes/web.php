@@ -6,6 +6,10 @@ use Illuminate\Support\Facades\Route;
 // rota de contato
 Route::get('/contatos', [ContatosController::class, 'index']) -> name('contatos.index');
 
+// Rota delete
+
+Route::delete('/contatos/{contatoid}', [ContatosController::class, 'delete']) ->name('contatos.delete');
+
 Route::get('/', function () {
     return view('welcome');
 });
