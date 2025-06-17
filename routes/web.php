@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ContatosController;
 use Illuminate\Support\Facades\Route;
+// rota de contato
+Route::get('/contatos', [ContatosController::class, 'index']) -> name('contatos.index');
 
 Route::get('/', function () {
     return view('welcome');
