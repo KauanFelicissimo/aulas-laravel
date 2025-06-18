@@ -19,4 +19,16 @@ class ContatosController extends Controller
 
         return back();
     }
+
+    public function create(Request $request){
+        // condicional para enentendimento do envio dos dados para os baco e dados
+        if($request->method() == "POST"){
+            $data = $request->all();
+            Contatos::create($data);
+
+            return redirect('/contatos');
+        }
+
+        return view('pages.contatos.create');
+    }
 }

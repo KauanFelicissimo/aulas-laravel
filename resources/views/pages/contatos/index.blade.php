@@ -10,7 +10,7 @@
 <form action="" method="GET">
 <input type="text" name="pesquisar" placeholder="Digite para buscar"/>
 <button> Pesquisar </button>
-<a type="button" href="" class="btn btn-success float-end">
+<a type="button" href="{{ route('contatos.create.post') }}" class="btn btn-success float-end">
     Inlcuir
 </a>
 </form>
