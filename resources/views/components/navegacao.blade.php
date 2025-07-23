@@ -9,12 +9,12 @@
                     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                         <ul class="nav flex-column">
                             <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2 active"
-                                    aria-current="page" href="{{ route('contatos.index') }}"> <svg class="bi" aria-hidden="true">
+                                    aria-current="page" href="{{route('contatos.index') }}"> <svg class="bi" aria-hidden="true">
                                         <use xlink:href="#house-fill"></use>
                                     </svg>
                                     Contatos
                                 </a> </li>
-                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="#"> <svg
+                            <li class="nav-item"> <a class="nav-link d-flex align-items-center gap-2" href="{{route('usuarios.index') }}"> <svg
                                         class="bi" aria-hidden="true">
                                         <use xlink:href="#people"></use>
                                     </svg>

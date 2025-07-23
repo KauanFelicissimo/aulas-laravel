@@ -4,22 +4,22 @@
  
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
  
-<h1 class="h1"> Contatos </h1>
+<h1 class="h1"> Usuários </h1>
 </div>
  
 <div>
-    <form action="{{ route('contatos.index') }}" method="GET">
+    <form action="{{ route('usuarios.index') }}" method="GET">
         <input type="text" name="pesquisar" placeholder="Digite para Buscar" />    
         <button type="submit">Pesquisar</button>
  
  
-<a type="button" href="{{ route('contatos.create.get') }}" class="btn btn-success float-end"> Incluir </a>
+<a type="button" href="{{ route('usuarios.create.get') }}" class="btn btn-success float-end"> Incluir </a>
  
  </form>
  
 <div class="table-responsive mt-4">
  
-@if ($findContatos -> isEmpty())
+@if ($findUser -> isEmpty())
  
     <p>Não Existe Dados</p>
  
@@ -30,7 +30,6 @@
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Número</th>
                 <th>E-mail</th>
                 <th>Ações</th>
             </tr>
@@ -38,18 +37,17 @@
  
         <tbody>
 <!-- Vai percorrer cada dado do banco de dados e armazenar em uma variavel chamada $contato -->
-        @foreach ($findContatos as $contato)
+        @foreach ($findUser as $user)
         <tr>
             <!-- Na variavel com os dados armazenados, buscara por nome, numero e contato e retornará os valores deles para a tela -->
-            <td>{{ $contato->nome }}</td>
-            <td>{{ $contato->numero }}</td>
-            <td>{{ $contato->email }}</td>
+            <td>{{ $user->name }}</td>
+            <td>{{ $user->email }}</td>
  
  
             <!-- Botão de Delete/Update -->
  
             <td>
-                <form style="display:inline"  action="{{ route('contatos.delete', $contato->id)}}"method="POST">
+                <form style="display:inline"  action="{{ route('usuarios.delete', $user->id)}}"method="POST">
  
                 @csrf
                 @method('DELETE')
@@ -60,7 +58,7 @@
  
                 </form>
  
-                <form style="display:inline" action="{{ route ('contatos.update.get', $contato->id)}}" method="POST" >
+                <form style="display:inline" action="{{ route ('usuarios.update.get', $user->id)}}" method="POST" >
  
                 @csrf
                 @method('GET')

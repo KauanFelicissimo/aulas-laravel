@@ -3,7 +3,7 @@
 
 <head>
     <!-- Referenciando o arquivo Javascrip do Public -->
-    <script src="{{ asset("js/color-model-js") }}"></script>
+    <script src="{{ asset('js/color-model-js') }}"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -251,6 +251,27 @@
     <script src="{{ asset('js/dashboard.js') }}" class="astro-vvvwv3sm"></script>
         </div>
     </div>
+
+    <!-- Biblioteca JQuery de Alert e Máscara -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"> </script>
+
+
+    <!-- Biblioteca JQuery de Máscara -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"> </script>
+
+
+    <!-- Acesso Aos Arquivos do Projeto -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous" class="astro-vvvwv3sm"> </script>
+    <script src="{{ asset('js/project.js') }}"> </script>
+    <script src="{{ asset('js/color-modes.js') }}"> </script> <!-- Referenciando o Arquivo JS do Public -->
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}" class="astro-vvvwv3sm"> </script>
+    <script src="{{ asset('js/dashboard.js')}}" class="astro-vvvwv3sm"> </script>
+
+
+    
    
 </body>
 
