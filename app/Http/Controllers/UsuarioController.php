@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Http\Requests\FormRequestUsuarios;
+
+// Hash de autenicação - necessário para a criptografia de senha
+use Illuminate\Support\Facades\Hash;
  
 class UsuarioController extends Controller
 {
@@ -23,5 +27,24 @@ class UsuarioController extends Controller
         $buscaRegistro->delete();
 
         return back();
+    }
+
+     public function create(FormRequestUsuarios $request)
+    {
+ 
+        //condicional para entendimento do envio dos dados para o banco de dados
+        if ($request->method() == "POST"){
+            $data = $request->all();
+            User::create(
+                [
+                    "name" => $data['nome'],
+                    "email" => $data['email'],
+                    "password" => Hash::make($data['password']),
+                ]
+            );
+ 
+            return redirect('/usario');
+        }
+        return view('pages.usuario.create');
     }
 }
