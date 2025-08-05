@@ -2,33 +2,40 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <!-- Referenciando o arquivo Javascrip do Public -->
-    <script src="{{ asset('js/color-model-js') }}"></script>
+    
+    <!-- Referenciado o arquivo Javascript do Public -->
+    <script src="{{ asset("js/color-modes.js") }}"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Astro v5.7.10">
-
     <title>Dashboard Template · Bootstrap v5.3</title>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
     <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT">
-
-    <!-- Fav icons -->
-    <link rel="apple-touch-icon" href="{{ asset('icons/apple-touch-icon.png') }}" sizes="180x180">
-    <link rel="icon" href="{{ asset('icons/favicon-32x32.png')}}" sizes="32x32" type="image/png">
-    <link rel="icon" href="{{ asset('icons/favicon-16x16.png')}}" sizes="16x16" type="image/png">
-    <link rel="mask-icon" href="{{ asset('icons/safari-pinned-tab.svg')}}" color="#712cf9">
-    <link rel="icon" href="{{ asset('icons/favicon.ico')}}">
+    
+        <!-- Favicons -->
+    <link rel="apple-touch-icon" href="{{ asset("icons/apple-touch-icon.png") }}" sizes="180x180">
+    <link rel="icon" href="{{ asset("icons/favicon-32x32.png") }}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{ asset("icons/favicon-16x16.png") }}" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="{{ asset("icons/safari-pinned-tab.svg") }}" color="#712cf9">
+    <link rel="icon" href="{{ asset("icons/favicon.ico") }}">
     <meta name="theme-color" content="#712cf9">
 
-    <!-- customizando o estilo do template -->
+    <!-- Customizando o estilo do template -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
 
+    
 
-    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset("css/dashboard.css") }}" rel="stylesheet">
+
+
     <style>
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -136,7 +143,8 @@
         </symbol>
     </svg>
     
-     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="calendar3" viewBox="0 0 16 16">
             <path
                 d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z">
@@ -217,7 +225,7 @@
         </symbol>
     </svg>
     <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark"> <a
-            class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Aurora</a>
+            class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">CRUD</a>
         <ul class="navbar-nav flex-row d-md-none">
             <li class="nav-item text-nowrap"> <button class="nav-link px-3 text-white" type="button"
                     data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch"
@@ -236,43 +244,35 @@
     </header>
     <div class="container-fluid">
         <div class="row">
-            @include("components.navegacao")
+           @include("components.navegacao")
                 </div>
             </div>
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">             
                 @yield("content")
             </main>
-             <script src="{{ asset('js/bootstrap.bundle.min.js') }}"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        class="astro-vvvwv3sm"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js"
-        integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"
-        class="astro-vvvwv3sm"></script>
-    <script src="{{ asset('js/dashboard.js') }}" class="astro-vvvwv3sm"></script>
         </div>
     </div>
 
-    <!-- Biblioteca JQuery de Alert e Máscara -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"> </script>
-
-
-    <!-- Biblioteca JQuery de Máscara -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"> </script>
-
-
-    <!-- Acesso Aos Arquivos do Projeto -->
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous" class="astro-vvvwv3sm"> </script>
-    <script src="{{ asset('js/project.js') }}"> </script>
-    <script src="{{ asset('js/color-modes.js') }}"> </script> <!-- Referenciando o Arquivo JS do Public -->
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}" class="astro-vvvwv3sm"> </script>
-    <script src="{{ asset('js/dashboard.js')}}" class="astro-vvvwv3sm"> </script>
-
-
     
-   
+    <!-- Biblioteca Jquery para alert e máscara -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Biblioteca jquery máscara -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- acesso ao arquivo projeto no public -->
+    <script src="{{ asset("js/projeto.js") }}"></script>
+
+    <script src="{{ asset("js/bootstrap.bundle.min.js") }}"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        class="astro-vvvwv3sm"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js"
+        integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"
+        class="astro-vvvwv3sm"></script>
+    <script src="{{ asset("js/dashboard.js") }}" class="astro-vvvwv3sm"></script>
 </body>
 
 </html>
